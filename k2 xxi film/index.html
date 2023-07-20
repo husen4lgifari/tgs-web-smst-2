@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.112.5">
+    <title>KELOMPOK 2 XXI FILM</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
+        margin-right: 10px;
+        border: none;
+        border-radius: 50%;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+  
+      .like {
+        background-color: #00c853;
+        color: #ffffff;
+        width: 24px;
+        height: 24px;
+      }
+  
+      .dislike {
+        background-color: #f44336;
+        color: #ffffff;
+        width: 24px;
+        height: 24px;
+      }
+  
+      .share {
+        background-color: #1877f2;
+        color: #ffffff;
+        width: 24px;
+        height: 24px;
+      }
+  
+      .whatsapp {
+        background-color: #25D366;
+        color: #ffffff;
+        width: 24px;
+        height: 24px;
+      }
+  
+      .button:hover {
+        opacity: 0.8;
+      }
+  
+      .animation {
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+      }
+  
+      @keyframes animateButton {
+        0% {
+          transform: scale(1);
+        }
+  
+        50% {
+          transform: scale(1.2);
+        }
+  
+        100% {
+          transform: scale(1);
+        }
+      }
+      .carousel.slide {
+        transition: none !important;
+      }
+      
+    </style>
+
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://openclipart.org/image/2400px/svg_to_png/174286/movieicon.png" width="30px" height="30px" alt="">
+            <strong>K2 FILM</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+            aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarHeader">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">ㅤHome</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">ㅤAbout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="kontak.html">ㅤContactㅤ</a>
+              </li>
+            </ul>
+            <form class="d-flex">ㅤ
+              <input class="form-control me-2" type="search" placeholder="Search movies..." aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+  
+
+    <main>
+
+    <section class="py-5 text-center container">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="card bg-dark text-white">
+              <div class="card-body">
+                <h1 class="card-title display-5">KELOMPOK 2 XXI FILM</h1>
+                <p class="card-text lead fs-6">KELOMPOK 2 XXI FILM adalah platform <br> online yang menyediakan akses kepada <br> pengguna untuk menonton berbagai jenis Film.</p>
+              </div>
+            </div>
+          </div>
+          
+    </section>
+    
+    
+    
+    
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/h-C7Ei0buG8"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <div class="card-body">
+              <p><b>Mermaid Down | Full Movie | Action Horror</b></p>
+              <p class="card-text">Mermaid Down adalah film laga dan horor yang penuh dengan ketegangan dan ketakutan.
+                Film ini mengisahkan tentang seorang wanita muda yang misterius yang ditemukan terdampar di pantai.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <a href="https://youtu.be/h-C7Ei0buG8" target="_blank" class="button like">
+                    <i class="fas fa-thumbs-up"></i>
+                  </a>
+                  <a href="https://youtu.be/h-C7Ei0buG8" target="_blank" class="button dislike">
+                    <i class="fas fa-thumbs-down"></i>
+                  </a>
+                  <button class="button share" data-toggle="modal" data-target="#shareModal">
+                    <i class="fas fa-share"></i>
+                  </button>
+                  <a href="https://wa.me/6283129055606" target="_blank" class="button whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                  </a>
+                </div>
+                <small class="text-body-secondary">1:34:11</small>
+              </div>
+              
+              <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="shareModalLabel">Bagikan Video</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      
+                      <div class="text-center mb-3">
+                        <button class="button facebook" onclick="shareFacebook()">
+                          <i class="fab fa-facebook"></i> Bagikan ke Facebook
+                        </button>
+                      </div>
+                      <div class="text-center mb-3">
+                        <button class="button twitter" onclick="shareTwitter()">
+                          <i class="fab fa-twitter"></i> Bagikan ke Twitter
+                        </button>
+                      </div>
+                      <div class="text-center">
+                        <button class="button email" onclick="shareEmail()">
+                          <i class="fas fa-envelope"></i> Bagikan via Email
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <script>
+                
+              
+                function shareFacebook() {
+                  var link = encodeURIComponent("https://youtu.be/h-C7Ei0buG8");
+                  var url = "https://www.facebook.com/sharer/sharer.php?u=" + link;
+                  window.open(url, "_blank");
+                  $('#shareModal').modal('hide');
+                }
+              
+                function shareTwitter() {
+                  var link = encodeURIComponent("https://youtu.be/h-C7Ei0buG8");
+                  var url = "https://twitter.com/intent/tweet?url=" + link;
+                  window.open(url, "_blank");
+                  $('#shareModal').modal('hide');
+                }
+              
+                function shareEmail() {
+                  var subject = encodeURIComponent("Check out this video");
+                  var body = encodeURIComponent("I found this interesting video: https://youtu.be/h-C7Ei0buG8");
+                  var url = "mailto:?subject=" + subject + "&body=" + body;
+                  window.location.href = url;
+                  $('#shareModal').modal('hide');
+                }
+              </script>
+              
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Pu2Iy0P9WeU"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <div class="card-body">
+              <p><b>[Full Movie]The Mermaid | Fantasy Romance film HD</b></p>
+              <p class="card-text">美人鱼 (The Mermaid) adalah sebuah film fantasi dan romantis yang menggambarkan sebuah
+                kisah cinta yang luar biasa antara manusia dan makhluk mitologi. Film ini mengisahkan tentang seorang
+                pria.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://youtu.be/Pu2Iy0P9WeU" target="_blank" class="button like">
+                      <i class="fas fa-thumbs-up"></i>
+                    </a>
+                    <a href="https://youtu.be/Pu2Iy0P9WeU" target="_blank" class="button dislike">
+                      <i class="fas fa-thumbs-down"></i>
+                    </a>
+                    <button class="button share" data-toggle="modal" data-target="#shareModal">
+                      <i class="fas fa-share"></i>
+                    </button>
+                    <a href="https://wa.me/6283129055606" target="_blank" class="button whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <small class="text-body-secondary">1:34:11</small>
+                </div>
+                
+                <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="shareModalLabel">Bagikan Video</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <div class="text-center mb-3">
+                          <button class="button facebook" onclick="shareFacebook()">
+                            <i class="fab fa-facebook"></i> Bagikan ke Facebook
+                          </button>
+                        </div>
+                        <div class="text-center mb-3">
+                          <button class="button twitter" onclick="shareTwitter()">
+                            <i class="fab fa-twitter"></i> Bagikan ke Twitter
+                          </button>
+                        </div>
+                        <div class="text-center">
+                          <button class="button email" onclick="shareEmail()">
+                            <i class="fas fa-envelope"></i> Bagikan via Email
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <script>
+                  
+                
+                  function shareFacebook() {
+                    var link = encodeURIComponent("https://youtu.be/Pu2Iy0P9WeU");
+                    var url = "https://www.facebook.com/sharer/sharer.php?u=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareTwitter() {
+                    var link = encodeURIComponent("https://youtu.be/Pu2Iy0P9WeU");
+                    var url = "https://twitter.com/intent/tweet?url=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareEmail() {
+                    var subject = encodeURIComponent("Check out this video");
+                    var body = encodeURIComponent("I found this interesting video: https://youtu.be/Pu2Iy0P9WeU");
+                    var url = "mailto:?subject=" + subject + "&body=" + body;
+                    window.location.href = url;
+                    $('#shareModal').modal('hide');
+                  }
+                </script>
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+              </div>
+            </div>
+          </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/zomYZpaHoNw"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <div class="card-body">
+              <p><b>The Stolen Princess | Full HD Animation</b></p>
+              <p class="card-text">The Stolen Princess adalah sebuah film animasi yang memukau dalam resolusi HD, yang
+                mengajak penonton pada petualangan seru penuh magis, romansa, dan keberanian. Ceritanya berlatar di
+                dunia fantasi yang penuh warna.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://youtu.be/zomYZpaHoNw" target="_blank" class="button like">
+                      <i class="fas fa-thumbs-up"></i>
+                    </a>
+                    <a href="https://youtu.be/zomYZpaHoNw" target="_blank" class="button dislike">
+                      <i class="fas fa-thumbs-down"></i>
+                    </a>
+                    <button class="button share" data-toggle="modal" data-target="#shareModal">
+                      <i class="fas fa-share"></i>
+                    </button>
+                    <a href="https://wa.me/6283129055606" target="_blank" class="button whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <small class="text-body-secondary">1:34:11</small>
+                </div>
+                
+                <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="shareModalLabel">Bagikan Video</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <div class="text-center mb-3">
+                          <button class="button facebook" onclick="shareFacebook()">
+                            <i class="fab fa-facebook"></i> Bagikan ke Facebook
+                          </button>
+                        </div>
+                        <div class="text-center mb-3">
+                          <button class="button twitter" onclick="shareTwitter()">
+                            <i class="fab fa-twitter"></i> Bagikan ke Twitter
+                          </button>
+                        </div>
+                        <div class="text-center">
+                          <button class="button email" onclick="shareEmail()">
+                            <i class="fas fa-envelope"></i> Bagikan via Email
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <script>
+                  
+                
+                  function shareFacebook() {
+                    var link = encodeURIComponent("https://youtu.be/zomYZpaHoNw");
+                    var url = "https://www.facebook.com/sharer/sharer.php?u=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareTwitter() {
+                    var link = encodeURIComponent("https://youtu.be/zomYZpaHoNw");
+                    var url = "https://twitter.com/intent/tweet?url=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareEmail() {
+                    var subject = encodeURIComponent("Check out this video");
+                    var body = encodeURIComponent("I found this interesting video: https://youtu.be/zomYZpaHoNw");
+                    var url = "mailto:?subject=" + subject + "&body=" + body;
+                    window.location.href = url;
+                    $('#shareModal').modal('hide');
+                  }
+                </script>
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+              </div>
+            </div>
+          </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QSUFizWP65U"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <div class="card-body">
+              <p><b>INDO SUB [Crazy Tsunami] Seekor buaya raksasa keluar dari sangkar menyerang manusia! | YOUKU</b>
+              </p>
+              <p class="card-text">"Crazy Tsunami" adalah film yang menggambarkan kejadian menegangkan ketika seekor
+                buaya raksasa keluar dari sangkar dan menyerang manusia. Film ini menyajikan aksi dan ketegangan yang
+                intens ketika manusia berjuang melawan buaya yang ganas </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://youtu.be/QSUFizWP65U" target="_blank" class="button like">
+                      <i class="fas fa-thumbs-up"></i>
+                    </a>
+                    <a href="https://youtu.be/QSUFizWP65U" target="_blank" class="button dislike">
+                      <i class="fas fa-thumbs-down"></i>
+                    </a>
+                    <button class="button share" data-toggle="modal" data-target="#shareModal">
+                      <i class="fas fa-share"></i>
+                    </button>
+                    <a href="https://wa.me/6283129055606" target="_blank" class="button whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <small class="text-body-secondary">1:34:11</small>
+                </div>
+                
+                <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="shareModalLabel">Bagikan Video</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <div class="text-center mb-3">
+                          <button class="button facebook" onclick="shareFacebook()">
+                            <i class="fab fa-facebook"></i> Bagikan ke Facebook
+                          </button>
+                        </div>
+                        <div class="text-center mb-3">
+                          <button class="button twitter" onclick="shareTwitter()">
+                            <i class="fab fa-twitter"></i> Bagikan ke Twitter
+                          </button>
+                        </div>
+                        <div class="text-center">
+                          <button class="button email" onclick="shareEmail()">
+                            <i class="fas fa-envelope"></i> Bagikan via Email
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <script>
+                  
+                
+                  function shareFacebook() {
+                    var link = encodeURIComponent("https://youtu.be/QSUFizWP65U");
+                    var url = "https://www.facebook.com/sharer/sharer.php?u=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareTwitter() {
+                    var link = encodeURIComponent("https://youtu.be/QSUFizWP65U");
+                    var url = "https://twitter.com/intent/tweet?url=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareEmail() {
+                    var subject = encodeURIComponent("Check out this video");
+                    var body = encodeURIComponent("I found this interesting video: https://youtu.be/QSUFizWP65U");
+                    var url = "mailto:?subject=" + subject + "&body=" + body;
+                    window.location.href = url;
+                    $('#shareModal').modal('hide');
+                  }
+                </script>
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+              </div>
+            </div>
+          </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/aj4bAqeXrSg"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <div class="card-body">
+              <p><b>Rat Disaster Ribuan tikus menyerang penumpang yang ada di kereta</b></p>
+              <p class="card-text">"Rat Disaster" (Bencana Tikus) adalah film yang menggambarkan kejadian menakutkan
+                ketika ribuan tikus menyerang penumpang yang berada di dalam kereta. Cerita ini menghadirkan situasi
+                yang penuh dengan ketegangan dan kekacauan saat para penumpang berjuang untuk bertahan hidup dari
+                serangan tikus.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://youtu.be/aj4bAqeXrSg" target="_blank" class="button like">
+                      <i class="fas fa-thumbs-up"></i>
+                    </a>
+                    <a href="https://youtu.be/aj4bAqeXrSg" target="_blank" class="button dislike">
+                      <i class="fas fa-thumbs-down"></i>
+                    </a>
+                    <button class="button share" data-toggle="modal" data-target="#shareModal">
+                      <i class="fas fa-share"></i>
+                    </button>
+                    <a href="https://wa.me/6283129055606" target="_blank" class="button whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <small class="text-body-secondary">1:34:11</small>
+                </div>
+                
+                <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="shareModalLabel">Bagikan Video</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <div class="text-center mb-3">
+                          <button class="button facebook" onclick="shareFacebook()">
+                            <i class="fab fa-facebook"></i> Bagikan ke Facebook
+                          </button>
+                        </div>
+                        <div class="text-center mb-3">
+                          <button class="button twitter" onclick="shareTwitter()">
+                            <i class="fab fa-twitter"></i> Bagikan ke Twitter
+                          </button>
+                        </div>
+                        <div class="text-center">
+                          <button class="button email" onclick="shareEmail()">
+                            <i class="fas fa-envelope"></i> Bagikan via Email
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <script>
+                  
+                
+                  function shareFacebook() {
+                    var link = encodeURIComponent("https://youtu.be/aj4bAqeXrSg");
+                    var url = "https://www.facebook.com/sharer/sharer.php?u=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareTwitter() {
+                    var link = encodeURIComponent("https://youtu.be/aj4bAqeXrSg");
+                    var url = "https://twitter.com/intent/tweet?url=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareEmail() {
+                    var subject = encodeURIComponent("Check out this video");
+                    var body = encodeURIComponent("I found this interesting video: https://youtu.be/aj4bAqeXrSg");
+                    var url = "mailto:?subject=" + subject + "&body=" + body;
+                    window.location.href = url;
+                    $('#shareModal').modal('hide');
+                  }
+                </script>
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AdiDg7wo_1Y"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <div class="card-body">
+              <p><b>HIU TITAN | Film Terbaru | Bahasa Indonesia Sub | Full Movie Indo |</b></p>
+              <p class="card-text">"Hiu Titan" adalah film yang menghadirkan aksi luar biasa dan ketegangan yang
+                menegangkan di perairan lepas. Film ini mengisahkan tentang keberadaan hiu raksasa yang legendaris,
+                dikenal sebagai Hiu Titan, yang menghuni perairan yang belum pernah dijelajahi. Hiu Titan menjadi
+                ancaman bagi kelangsungan hidup mereka.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://youtu.be/AdiDg7wo_1Y" target="_blank" class="button like">
+                      <i class="fas fa-thumbs-up"></i>
+                    </a>
+                    <a href="https://youtu.be/AdiDg7wo_1Y" target="_blank" class="button dislike">
+                      <i class="fas fa-thumbs-down"></i>
+                    </a>
+                    <button class="button share" data-toggle="modal" data-target="#shareModal">
+                      <i class="fas fa-share"></i>
+                    </button>
+                    <a href="https://wa.me/6283129055606" target="_blank" class="button whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <small class="text-body-secondary">1:34:11</small>
+                </div>
+                
+                <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="shareModalLabel">Bagikan Video</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <div class="text-center mb-3">
+                          <button class="button facebook" onclick="shareFacebook()">
+                            <i class="fab fa-facebook"></i> Bagikan ke Facebook
+                          </button>
+                        </div>
+                        <div class="text-center mb-3">
+                          <button class="button twitter" onclick="shareTwitter()">
+                            <i class="fab fa-twitter"></i> Bagikan ke Twitter
+                          </button>
+                        </div>
+                        <div class="text-center">
+                          <button class="button email" onclick="shareEmail()">
+                            <i class="fas fa-envelope"></i> Bagikan via Email
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <script>
+                  
+                
+                  function shareFacebook() {
+                    var link = encodeURIComponent("https://youtu.be/AdiDg7wo_1Y");
+                    var url = "https://www.facebook.com/sharer/sharer.php?u=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareTwitter() {
+                    var link = encodeURIComponent("https://youtu.be/AdiDg7wo_1Y");
+                    var url = "https://twitter.com/intent/tweet?url=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareEmail() {
+                    var subject = encodeURIComponent("Check out this video");
+                    var body = encodeURIComponent("I found this interesting video: https://youtu.be/AdiDg7wo_1Y");
+                    var url = "mailto:?subject=" + subject + "&body=" + body;
+                    window.location.href = url;
+                    $('#shareModal').modal('hide');
+                  }
+                </script>
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vnCfg-yjcwg"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <div class="card-body">
+              <p><b>TALISMAN - Jackie Chan Hollywood English Movie | Hollywood Full Action Movie In English HD</b></p>
+              <p class="card-text">"Talisman" adalah sebuah film Hollywood yang menampilkan legenda aksi Jackie Chan
+                dalam petualangan yang penuh dengan aksi, komedi, dan keajaiban. Film ini mengikuti perjalanan seorang
+                pahlawan bernama Jack yang mencari serangkaian artefak mistis yang dikenal sebagai Talisman, yang
+                diyakini memiliki kekuatan luar biasa.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://youtu.be/vnCfg-yjcwg" target="_blank" class="button like">
+                      <i class="fas fa-thumbs-up"></i>
+                    </a>
+                    <a href="https://youtu.be/vnCfg-yjcwg" target="_blank" class="button dislike">
+                      <i class="fas fa-thumbs-down"></i>
+                    </a>
+                    <button class="button share" data-toggle="modal" data-target="#shareModal">
+                      <i class="fas fa-share"></i>
+                    </button>
+                    <a href="https://wa.me/6283129055606" target="_blank" class="button whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <small class="text-body-secondary">1:34:11</small>
+                </div>
+                
+                <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="shareModalLabel">Bagikan Video</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <div class="text-center mb-3">
+                          <button class="button facebook" onclick="shareFacebook()">
+                            <i class="fab fa-facebook"></i> Bagikan ke Facebook
+                          </button>
+                        </div>
+                        <div class="text-center mb-3">
+                          <button class="button twitter" onclick="shareTwitter()">
+                            <i class="fab fa-twitter"></i> Bagikan ke Twitter
+                          </button>
+                        </div>
+                        <div class="text-center">
+                          <button class="button email" onclick="shareEmail()">
+                            <i class="fas fa-envelope"></i> Bagikan via Email
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <script>
+                  
+                
+                  function shareFacebook() {
+                    var link = encodeURIComponent("https://youtu.be/vnCfg-yjcwg");
+                    var url = "https://www.facebook.com/sharer/sharer.php?u=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareTwitter() {
+                    var link = encodeURIComponent("https://youtu.be/vnCfg-yjcwg");
+                    var url = "https://twitter.com/intent/tweet?url=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareEmail() {
+                    var subject = encodeURIComponent("Check out this video");
+                    var body = encodeURIComponent("I found this interesting video: https://youtu.be/vnCfg-yjcwg");
+                    var url = "mailto:?subject=" + subject + "&body=" + body;
+                    window.location.href = url;
+                    $('#shareModal').modal('hide');
+                  }
+                </script>
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+              </div>
+            </div>
+          </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1_Ot2eTcoU8"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <div class="card-body">
+              <p><b>The Bad Guys: Reign of Chaos - Ma Dong-seok - Film Inggris Lengkap (Aksi, Kejahatan) - HD</b></p>
+              <p class="card-text">"The Bad Guys: Reign of Chaos" adalah sebuah film yang menampilkan aktor populer Ma
+                Dong-seok dalam peran utama. Film ini menghadirkan aksi laga yang intens dan cerita yang penuh dengan
+                ketegangan.Dalam film ini, Ma Dong-seok memerankan seorang mantan detektif yang dijebak dan dipenjara
+                karena tuduhan. </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://youtu.be/1_Ot2eTcoU8" target="_blank" class="button like">
+                      <i class="fas fa-thumbs-up"></i>
+                    </a>
+                    <a href="https://youtu.be/1_Ot2eTcoU8" target="_blank" class="button dislike">
+                      <i class="fas fa-thumbs-down"></i>
+                    </a>
+                    <button class="button share" data-toggle="modal" data-target="#shareModal">
+                      <i class="fas fa-share"></i>
+                    </button>
+                    <a href="https://wa.me/6283129055606" target="_blank" class="button whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <small class="text-body-secondary">1:34:11</small>
+                </div>
+                
+                <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="shareModalLabel">Bagikan Video</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <div class="text-center mb-3">
+                          <button class="button facebook" onclick="shareFacebook()">
+                            <i class="fab fa-facebook"></i> Bagikan ke Facebook
+                          </button>
+                        </div>
+                        <div class="text-center mb-3">
+                          <button class="button twitter" onclick="shareTwitter()">
+                            <i class="fab fa-twitter"></i> Bagikan ke Twitter
+                          </button>
+                        </div>
+                        <div class="text-center">
+                          <button class="button email" onclick="shareEmail()">
+                            <i class="fas fa-envelope"></i> Bagikan via Email
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <script>
+                  
+                
+                  function shareFacebook() {
+                    var link = encodeURIComponent("https://youtu.be/1_Ot2eTcoU8");
+                    var url = "https://www.facebook.com/sharer/sharer.php?u=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareTwitter() {
+                    var link = encodeURIComponent("https://youtu.be/1_Ot2eTcoU8");
+                    var url = "https://twitter.com/intent/tweet?url=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareEmail() {
+                    var subject = encodeURIComponent("Check out this video");
+                    var body = encodeURIComponent("I found this interesting video: https://youtu.be/1_Ot2eTcoU8");
+                    var url = "mailto:?subject=" + subject + "&body=" + body;
+                    window.location.href = url;
+                    $('#shareModal').modal('hide');
+                  }
+                </script>
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/r-kga0n6z3M"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            <div class="card-body">
+              <p><b>FILM SANG PRAWIRA (Official Full Movie) SubTitle Bahasa Inggris || a Film by PONTI GEA</b></p>
+              <p class="card-text">Film layar lebar ini menampilkan kisah seorang anak desa yang berasal dari sebuah
+                kampung bernama Bakkara di pinggir Danau Toba yang meraih cita-citanya menjadi seorang anggota Polri
+                lulusan Akademi Kepolisian. Film ini juga menampilkan profesionalisme kepolisian dalam pelaksanaan
+                tugas sesuai dengan Program Kapolri.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="https://youtu.be/r-kga0n6z3M" target="_blank" class="button like">
+                      <i class="fas fa-thumbs-up"></i>
+                    </a>
+                    <a href="https://youtu.be/r-kga0n6z3M" target="_blank" class="button dislike">
+                      <i class="fas fa-thumbs-down"></i>
+                    </a>
+                    <button class="button share" data-toggle="modal" data-target="#shareModal">
+                      <i class="fas fa-share"></i>
+                    </button>
+                    <a href="https://wa.me/6283129055606" target="_blank" class="button whatsapp">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <small class="text-body-secondary">1:34:11</small>
+                </div>
+                
+                <div class="modal fade" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="shareModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="shareModalLabel">Bagikan Video</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        
+                        <div class="text-center mb-3">
+                          <button class="button facebook" onclick="shareFacebook()">
+                            <i class="fab fa-facebook"></i> Bagikan ke Facebook
+                          </button>
+                        </div>
+                        <div class="text-center mb-3">
+                          <button class="button twitter" onclick="shareTwitter()">
+                            <i class="fab fa-twitter"></i> Bagikan ke Twitter
+                          </button>
+                        </div>
+                        <div class="text-center">
+                          <button class="button email" onclick="shareEmail()">
+                            <i class="fas fa-envelope"></i> Bagikan via Email
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <script>
+                  
+                
+                  function shareFacebook() {
+                    var link = encodeURIComponent("https://youtu.be/r-kga0n6z3M");
+                    var url = "https://www.facebook.com/sharer/sharer.php?u=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareTwitter() {
+                    var link = encodeURIComponent("https://youtu.be/r-kga0n6z3M");
+                    var url = "https://twitter.com/intent/tweet?url=" + link;
+                    window.open(url, "_blank");
+                    $('#shareModal').modal('hide');
+                  }
+                
+                  function shareEmail() {
+                    var subject = encodeURIComponent("Check out this video");
+                    var body = encodeURIComponent("I found this interesting video: https://youtu.be/r-kga0n6z3M");
+                    var url = "mailto:?subject=" + subject + "&body=" + body;
+                    window.location.href = url;
+                    $('#shareModal').modal('hide');
+                  }
+                </script>
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-body-secondary py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+    </p>
+    
+  </div>
+</footer>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
